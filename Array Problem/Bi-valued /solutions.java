@@ -16,7 +16,7 @@ public class BiValuedArray {
                 }
                 left++;
             }
-
+ 
             maxLen = Math.max(maxLen, right - left + 1);
         }
 

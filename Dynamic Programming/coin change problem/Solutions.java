@@ -8,8 +8,10 @@ class Solution
         Solution obj = new Solution();
         System.out.print(obj.coinChange(coins,amount)); 
     }
+
    public int coinChange(int[] coins, int amount) {
         if(amount <1)return 0;
+
         int dp[]=new int[amount+1];
         dp[0]=0;
         for(int i=1;i<=amount;i++)
@@ -17,7 +19,7 @@ class Solution
             dp[i]=Integer.MAX_VALUE;
 
             for(int c:coins)
-            {
+            { 
                 if(c<=i && dp[i-c]!=Integer.MAX_VALUE)
                 dp[i]=Math.min(dp[i],1+dp[i-c]);
             }
