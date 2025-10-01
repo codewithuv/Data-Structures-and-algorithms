@@ -7,7 +7,7 @@ class MergeSortedArrays {
         int gap = (n + m + 1) / 2; // initial gap (ceil)
 
         while (gap > 0) {
-            int i = 0, j = gap;
+            int i = 0, j = gap; 
 
             while (j < n + m) {
                 int a = (i < n) ? arr1[i] : arr2[i - n];
